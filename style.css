@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= CONTROLS ================= */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+}
+
+.control-group label {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+select,
+input[type="number"] {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+
+    background: #334155;
+    color: white;
+
+    outline: none;
+}
+
+input[type="range"] {
+    width: 180px;
+    cursor: pointer;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 20px 0;
+
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+/* ================= SEARCH ================= */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.search-section input {
+    width: 150px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ================= INFORMATION ================= */
+
+.algorithm-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.algorithm-info div {
+    background: #1e293b;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.algorithm-info span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.algorithm-info strong {
+    font-size: 18px;
+}
+
+/* ================= VISUALIZER ================= */
+
+.visualizer {
+    height: 450px;
+
+    background: #1e293b;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+#arrayContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 3px;
+}
+
+/* ================= BARS ================= */
+
+.bar {
+    flex: 1;
+
+    max-width: 25px;
+
+    background: #3b82f6;
+
+    border-radius: 4px 4px 0 0;
+
+    transition:
+        height 0.15s ease,
+        background 0.15s ease;
+}
+
+.bar.comparing {
+    background: #f59e0b;
+}
+
+.bar.sorted {
+    background: #22c55e;
+}
+
+.bar.found {
+    background: #a855f7;
+}
+
+.bar.minimum {
+    background: #ef4444;
+}
+
+/* ================= STATUS ================= */
+
+.status {
+    text-align: center;
+
+    margin: 20px 0;
+}
+
+#statusText {
+    color: #94a3b8;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .algorithm-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visualizer {
+        height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .algorithm-info {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .control-group {
+        width: 100%;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+
+    .visualizer {
+        height: 300px;
+    }
+}

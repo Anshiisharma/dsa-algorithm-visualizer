@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSA Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DSA Algorithm Visualizer</h1>
+        <p>Visualize sorting and searching algorithms step by step</p>
+    </header>
+
+    <main>
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <div class="control-group">
+                <label for="algorithm">Algorithm</label>
+
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="linear">Linear Search</option>
+                    <option value="binary">Binary Search</option>
+                </select>
+            </div>
+
+
+            <div class="control-group">
+                <label for="arraySize">
+                    Array Size:
+                    <span id="arraySizeValue">30</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="arraySize"
+                    min="5"
+                    max="60"
+                    value="30"
+                >
+            </div>
+
+
+            <div class="control-group">
+                <label for="speed">
+                    Speed
+                </label>
+
+                <input
+                    type="range"
+                    id="speed"
+                    min="1"
+                    max="100"
+                    value="50"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- Buttons -->
+        <section class="buttons">
+
+            <button id="generateBtn">
+                Generate Array
+            </button>
+
+            <button id="startBtn">
+                ▶ Start
+            </button>
+
+            <button id="pauseBtn">
+                ⏸ Pause
+            </button>
+
+            <button id="resetBtn">
+                ↻ Reset
+            </button>
+
+        </section>
+
+
+        <!-- Search Target -->
+        <section id="searchSection" class="search-section hidden">
+
+            <label for="searchValue">
+                Search Value
+            </label>
+
+            <input
+                type="number"
+                id="searchValue"
+                placeholder="Enter value"
+            >
+
+        </section>
+
+
+        <!-- Algorithm Information -->
+        <section class="algorithm-info">
+
+            <div>
+                <span>Algorithm</span>
+                <strong id="algorithmName">Bubble Sort</strong>
+            </div>
+
+            <div>
+                <span>Time Complexity</span>
+                <strong id="complexity">O(n²)</strong>
+            </div>
+
+            <div>
+                <span>Comparisons</span>
+                <strong id="comparisons">0</strong>
+            </div>
+
+            <div>
+                <span>Swaps</span>
+                <strong id="swaps">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Visualization -->
+        <section class="visualizer">
+
+            <div id="arrayContainer"></div>
+
+        </section>
+
+
+        <!-- Status -->
+        <section class="status">
+
+            <p id="statusText">
+                Generate an array to get started.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
